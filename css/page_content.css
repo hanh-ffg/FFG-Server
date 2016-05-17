@@ -1,0 +1,154 @@
+/* Page Content CSS */
+.eventList {
+	list-style-type: none;
+	margin: 15px 0 0 0 !important;
+}
+
+h2.event {
+	text-transform: uppercase;
+	color: #FFF;
+	background-color: #243D42;
+	font-size: 20px;
+	margin-top: 15px;
+	padding: 5px 10px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.eventList li {
+	padding: 20px;
+	border-bottom: 1px solid #C4BDA7;
+	overflow: auto;
+}
+
+.date {
+	width: 55px;
+	background: #C4BDA7;
+	text-align: center;
+	color: #FFF;
+	padding: 20px;
+	float: left;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+	text-transform: uppercase;
+	margin: 0 15px 10px 0;
+	line-height: 24px;
+}
+
+p.time {
+	float: right;
+	width: 120px;
+	margin: 0 0 10px 20px;
+}
+
+.PDF {
+	list-style-type: none;
+	margin: 0 0 0 10px !important;
+}
+
+.PDF li a {
+	padding: 0 0 0 20px;
+	height: 16px;
+	display: block;
+	background: url(../images/pdficon_small.png) 0 0 no-repeat;
+	margin: 10px 0;
+}
+
+.email {
+	padding: 0 0 0 20px;
+	height: 16px;
+	display: block;
+	background: url(../images/mail_2.png) 0 0 no-repeat;
+}
+
+.phone {
+	padding: 0 0 0 20px;
+	height: 16px;
+	display: block;
+	background: url(../images/phone_1.png) 0 0 no-repeat;
+	margin: 3px 0;
+}
+
+.searchList {
+	margin-bottom: 20px;
+}
+
+.searchLink {
+	color: #E4A307;
+}
+
+.searchList li {
+	padding: 15px;
+	border-bottom: 1px solid #C4BDA7;
+}
+
+#searchPager {
+	margin: 20px 0 0 30px;
+}
+
+.current-page {
+	background: #C4BDA7;
+	padding: 10px;
+	margin: 0 5px;
+	text-align: center;
+}
+
+.contacts {
+	list-style-type: none;
+}
+
+.contacts li {
+	border-bottom: 1px solid #C4BDA7;
+	padding: 10px 0;
+}
+
+.contacts li:nth-child(6) span {
+	margin-top: 20px;
+}
+
+.staff li img {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.staff {
+	margin: 0 auto !important;
+	list-style-type: none;
+}
+
+.staff li {
+	padding: 10px 0;
+	overflow: auto;
+	border-bottom: 1px solid #C4BDA7;
+}
+
+#intakeview p {
+	margin: 12px 0;
+	line-height: 20px;
+}
+
+.taggedlink {
+	text-decoration: none;
+	margin-bottom: 15px;
+	line-height: 36px;
+	display: block;
+	font-size: 28px;
+}
+
+.post {
+	margin-bottom: 25px;
+}
+
+.recentPosts li {
+	padding-right: 15px;
+}
+
+.recentPosts li a {
+	text-transform: none;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	display: block
+}
