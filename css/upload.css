@@ -17,3 +17,16 @@ a#mailto{
 .bold{
 	font-weight: bold;
 }
+
+h3
+{
+color: white;
+}
+
+a#add-file{
+color:blue;
+}
+
+a{
+color yellow;
+}
