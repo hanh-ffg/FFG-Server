@@ -87,7 +87,7 @@
 
         <div class="container">
             <div class="row pad-top-5">
-                <div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
+                <div class="col-sm-offset-3 col-sm-9">
                     <fieldset>
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -98,9 +98,13 @@
                                     <label for="txtFname" class="col-sm-4 control-label">
                                         First
 										Name:</label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox runat="server" ClientidMode="Static" CssClass="form-control" id="txtFname"
+                                    <div class="col-sm-4">
+                                        <asp:TextBox runat="server" ClientIDMode="Static" CssClass="form-control" ID="txtFname"
                                             placeholder="First Name"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <asp:RequiredFieldValidator ID="rfvFname" runat="server" ErrorMessage="This field is required" ControlToValidate="txtFname"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="revFname" runat="server" ErrorMessage="Invalid character found" ControlToValidate="txtFname" ValidationExpression="/^[a-zA-Z ,.'-]+$/i"></asp:RegularExpressionValidator>
                                     </div>
                                 </div>
 
@@ -109,19 +113,25 @@
                                         Last
 										Name:
                                     </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox runat="server" ClientidMode="Static" CssClass="form-control" id="txtLname"
+                                    <div class="col-sm-4">
+                                        <asp:TextBox runat="server" ClientIDMode="Static" CssClass="form-control" ID="txtLname"
                                             placeholder="Last Name"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <asp:RequiredFieldValidator ID="rfvLname" runat="server" ErrorMessage="This field is required" ControlToValidate="txtLname"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="revLname" runat="server" ErrorMessage="Invalid character found" ControlToValidate="txtLname" ValidationExpression="/^[a-zA-Z ,.'-]+$/i"></asp:RegularExpressionValidator>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="txtAddressLine1" class="col-sm-4 control-label">
-                                        Address Line 1:
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox runat="server" ClientidMode="Static" CssClass="form-control" id="txtAddressLine1"
+                                        Address Line 1:</label>
+                                    <div class="col-sm-4">
+                                        <asp:TextBox runat="server" ClientIDMode="Static" CssClass="form-control" ID="txtAddressLine1"
                                             placeholder="Address Line 1"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <asp:RequiredFieldValidator ID="rfvAdd1" runat="server" ErrorMessage="This field is required" ControlToValidate="txtAddressLine1"></asp:RequiredFieldValidator>
                                     </div>
                                 </div>
 
@@ -129,9 +139,11 @@
                                     <label for="txtAddressLine2" class="col-sm-4 control-label">
                                         Address Line 2:
                                     </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox runat="server" ClientidMode="Static" CssClass="form-control" id="txtAddressLine2"
+                                    <div class="col-sm-4">
+                                        <asp:TextBox runat="server" ClientIDMode="Static" CssClass="form-control" ID="txtAddressLine2"
                                             placeholder="Address Line 2"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-4">
                                     </div>
                                 </div>
 
@@ -139,9 +151,13 @@
                                     <label for="txtCity" class="col-sm-4 control-label">
                                         City:
                                     </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox runat="server" ClientidMode="Static" CssClass="form-control" id="txtCity"
+                                    <div class="col-sm-4">
+                                        <asp:TextBox runat="server" ClientIDMode="Static" CssClass="form-control" ID="txtCity"
                                             placeholder="Address Line 2"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <asp:RequiredFieldValidator ID="rfvCity" runat="server" ErrorMessage="This field is required" ControlToValidate="txtCity"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="revCity" runat="server" ErrorMessage="Invalid character found" ControlToValidate="txtCity" ValidationExpression="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"></asp:RegularExpressionValidator>
                                     </div>
                                 </div>
 
@@ -149,9 +165,13 @@
                                     <label for="txtState" class="col-sm-4 control-label">
                                         State:
                                     </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox runat="server" ClientidMode="Static" CssClass="form-control" id="txtState"
+                                    <div class="col-sm-4">
+                                        <asp:TextBox runat="server" ClientIDMode="Static" CssClass="form-control" ID="txtState"
                                             placeholder="State"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <asp:RequiredFieldValidator ID="rfvState" runat="server" ErrorMessage="This field is required" ControlToValidate="txtState"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="revState" runat="server" ErrorMessage="Invalid character found. Please enter letters only" ControlToValidate="txtState" ValidationExpression="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"></asp:RegularExpressionValidator>
                                     </div>
                                 </div>
 
@@ -159,10 +179,13 @@
                                     <label for="txtPostalCode" class="col-sm-4 control-label">
                                         Postal Code:
                                     </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox runat="server" ClientidMode="Static" id="TextBox1"></asp:TextBox>
-                                        <asp:TextBox runat="server" type="number" CssClass="form-control" id="txtPostalCode"
+                                    <div class="col-sm-4">
+                                        <asp:TextBox runat="server" type="number" CssClass="form-control" ID="txtPostalCode"
                                             placeholder="Postal Code"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <asp:RequiredFieldValidator ID="rfvZipCode" runat="server" ErrorMessage="This field is required" ControlToValidate="txtPostalCode"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="revPostal" runat="server" ErrorMessage="Invalid postal code format." ControlToValidate="txtPostalCode" ValidationExpression="\d{5}"></asp:RegularExpressionValidator>
                                     </div>
                                 </div>
                             </div>
@@ -177,9 +200,13 @@
                                     <label for="txtPhone" class="col-sm-4 control-label">
                                         Phone Number:
                                     </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox runat="server" type="tel" CssClass="form-control" id="txtPhone"
+                                    <div class="col-sm-4">
+                                        <asp:TextBox runat="server" type="tel" CssClass="form-control" ID="txtPhone"
                                             placeholder="Phone number"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="This field is required" ControlToValidate="txtPhone"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="revPhone" runat="server" ErrorMessage="Invalid phone format. Please enter phone number in format 123-456-7890" ControlToValidate="txtPhone" ValidationExpression="\d{3}-\d{3}-\d{4}"></asp:RegularExpressionValidator>
                                     </div>
                                 </div>
 
@@ -187,9 +214,13 @@
                                     <label for="txtEmail" class="col-sm-4 control-label">
                                         Email:
                                     </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox runat="server" ClientidMode="Static" CssClass="form-control" id="txtEmail"
+                                    <div class="col-sm-4">
+                                        <asp:TextBox runat="server" ClientIDMode="Static" CssClass="form-control" ID="txtEmail"
                                             placeholder="Email"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="This field is requỉed" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Invalid email format" ControlToValidate="txtEmail" ValidationExpression="\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"></asp:RegularExpressionValidator>
                                     </div>
                                 </div>
                             </div>
@@ -217,8 +248,8 @@
                                             <label for="" class="col-sm-4 control-label" name="lblCategory">
                                                 Document Category:
                                             </label>
-                                            <div class="col-sm-8">
-                                                <asp:DropDownList runat="server" CssClass="form-control" id="sCategory">
+                                            <div class="col-sm-4">
+                                                <asp:DropDownList runat="server" CssClass="form-control" ID="sCategory">
                                                     <asp:ListItem Value="0" Text="-Select-"></asp:ListItem>
                                                     <asp:ListItem Value="1" Text="CityLIFT Program"></asp:ListItem>
                                                     <asp:ListItem Value="2">Cuyahoga County Down Payment
@@ -245,8 +276,8 @@
                                         <div class="form-group">
                                             <label class="col-sm-4 control-label" aria-busy="False" name="lblFileName">
                                                 File Name:</label>
-                                            <div class="col-sm-8">
-                                                <asp:TextBox runat="server" id="txtFileName" CssClass="form-control"></asp:TextBox>
+                                            <div class="col-sm-4">
+                                                <asp:TextBox runat="server" ID="txtFileName" CssClass="form-control"></asp:TextBox>
                                             </div>
                                         </div>
 
@@ -254,7 +285,7 @@
                                             <label class="col-sm-4 control-label" name="lblFile">
                                                 Select
 												File</label>
-                                            <div class="col-sm-8">
+                                            <div class="col-sm-4">
                                                 <%--<input type="file" class="file"file" />--%>
                                                 <asp:FileUpload ID="file" runat="server" AllowMultiple="false" />
                                             </div>
@@ -266,7 +297,7 @@
                     </fieldset>
 
                     <div class="form-group">
-                        <div class="col-sm-offset-4 col-sm-8">
+                        <div class="col-sm-offset-4 col-sm-4">
                             <a href="#" id="add-file"><span
                                 class="glyphicon glyphicon-plus"></span>Add more files
                             </a>
@@ -290,7 +321,7 @@
 
                     <div class="form-group">
                         <div class="text-center">
-                            <asp:Button id="btnUpload" Text="Upload" runat="server" ClientidMode="Static" OnClick="UploadMultipleFiles" />
+                            <asp:Button ID="btnUpload" Text="Upload" runat="server" ClientIDMode="Static" OnClick="UploadMultipleFiles" />
                         </div>
                     </div>
 
@@ -336,7 +367,7 @@
                         </div>
                     </div>
                     <hr />
-                    <asp:Label id="lblSuccess" runat="server" ClientidMode="Static" ForeColor="Green" />
+                    <asp:Label ID="lblSuccess" runat="server" ClientIDMode="Static" ForeColor="Green" />
                 </div>
             </div>
         </div>

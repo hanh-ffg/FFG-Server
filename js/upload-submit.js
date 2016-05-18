@@ -3,10 +3,6 @@ $(document).ready(function() {
 		getSubmitDateTime();
 		checkform();
 	})
-	
-	$("#btnSubmit").click(function() {
-		$("#form").submit();
-	})
 });
 
 function getSubmitDateTime() {
@@ -65,18 +61,14 @@ function checkform() {
 	    $parentDiv = $this.parent();
 	    if ($this.val() == "" || $this.val() == "-Select-") {
 	        $formGroup.addClass("has-error has-feedback");
-	        $parentDiv.append('<span class="glyphicon glyphicon-remove form-control-feedback"></span>');
-	        $parentDiv.append('<span class="help-inline text-danger">This field is required</span>');
 	        isBlank = true;
 	    } else {
 	        $formGroup.removeClass("has-error").addClass("has-success");
-	        $this.next("span[id^=errorIcon]").remove();
-	        $this.next("span[class=help-inline]").remove();
 	        isBlank = false;
 	    }
 	})
 
-	if (valid == 0) {
+	if (!isBlank) {
 	    getCategory();
 	    $('#confirmModal').modal('show');
 		// setTimeout("submitForm()", 10000);
